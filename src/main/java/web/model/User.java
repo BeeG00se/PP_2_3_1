@@ -20,15 +20,6 @@ public class User {
     public User() {
     }
 
-    @Override
-    public String toString() {
-        return "User{" +
-                "userId=" + userId +
-                ", name='" + name + '\'' +
-                ", surname='" + surname + '\'' +
-                '}';
-    }
-
     public User(int userId, String name, String surname) {
         this.userId = userId;
         this.name = name;
@@ -57,5 +48,16 @@ public class User {
 
     public void setSurname(String surname) {
         this.surname = surname;
+    }
+
+    //todo: необходимо ввести equals/hashCode
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "userId=" + userId +
+                ", name='" + name + '\'' +
+                ", surname='" + surname + '\'' +
+                '}';
     }
 }

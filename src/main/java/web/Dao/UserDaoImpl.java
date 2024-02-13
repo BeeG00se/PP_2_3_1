@@ -11,6 +11,7 @@ import java.util.List;
 @Component
 @Transactional
 public class UserDaoImpl implements UserDao {
+
     private final static String GET_ALL_USERS = "select u from User u";
     private final static String GET_USER_BY_ID = "from User u where u.userId = : userId";
 

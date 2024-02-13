@@ -7,6 +7,7 @@ import web.model.User;
 
 import javax.validation.Valid;
 import java.util.List;
+
 @Service
 @Transactional
 public class UserServiceImpl implements UserService {
@@ -24,9 +25,10 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
+    //todo: необходимо изучить над какими методами (искл. обобщение в виде @Transactional) проставляем @Transactional(READ_ONLY..) и зачем
     public User getUserById(int id) {
         return userDao.getUserById(id);
-    }
+    }//todo: стоит перейти к ссылочным типам
 
     @Override
     public void addUser(@Valid User user) {
